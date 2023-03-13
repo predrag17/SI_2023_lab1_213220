@@ -1,0 +1,41 @@
+4. Od kako kreirav remote repository na git hub lokalno na mojot Desktop kreirav direktorium koj shto e 
+lokalen repozitorium, so komandata mkdir, so komandata cd SI_2023_lab1_213220, vlegov vnatre vo reporzitoriumot vo
+koj shto inicijalizirav Git so komandata git init.
+5. Povrzuvanje na lokalno repo i na remote repo se pravi so komandata git remote add origin.
+6. Kreirav README.md dadoteka so komandata nano README.md, od kako ja kreirav datotekata taa beshe vo untracked,
+za da mozheme da napravime commit, mora prvo da se napravi git add README.md so koja shto datotekata vlaga vo staged
+koja shto mozheme da ja commitneme, so komandata git commit -m "Initial commit" go napraviv prviot commit.
+7. Isto i za ovoj chekor kako prethodniot samo shto sodrzhinata e druga.
+8. Sinhroniziranje na site granki napraviv so git push -u origin master, odnosno gi prikachiv na remote repo.
+9. Otvaranje na tri granki se pravi so git branch <ime na grankata>.
+10. Prefrlanje na druga granka se pravi so git checkout <ime na grankata>.
+11. Za da ja popravam greshkata vo datotekata SILab.java, ja iskoristiv nano SILab.java. Otkako ja popraviv
+i ja zachuvav greshkata datotekata vleguva vo sostojba modified, na koja shto mora da i napravime pak
+git add SILab.java za da bide vo staged sostojba i od tamu da mozheme da commitneme so komandata 
+git commit. Vo bug1 ja popravi greshkata vo for ciklusot i napraviv commit so poraka 
+git commit -m "Fix wrong loop for reading".
+
+Za bug2 i bug3 go napraviv istoto, no prvo se prefrliv na tie granki, so komandata
+git checkout <ime na grankata> samo porakata e druga i greshkata e druga.
+16. Sinhroniziranjeto go napraviv taka shto prvo se prefrliv na master grankata, i ja povikav
+komandata git push --all, poradi toa shto treba da se stavat site granki.
+17. Prefrlanje na grank so komandata git checkout <ime na granka>
+18. Grankata bug1 ja spoiv so master grankata taka shto ja povikav komandata git merge bug1, so ovaa komanda
+ja spoivme grankata bug1 so master taka shto commitot od bug1 se naogja na master, tuka nema conflict, 
+poradi toa shto na master grankata nema commit koj shto kje smeta na commitot od bug1. Tuka imashe
+fast forward spojuvanje.
+19. Sinhroniziranjeto: git push -u origin master
+20. Koga napraviv git merge bug2 mi ja dade ovaa poraka
+Auto-merging SILab1.java
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+poradi toa shto ima conflict spojuvanjeto se pravi rekurzivno taka shto na master grankata se pravi nov commit
+koj shto kje sodrzhi bug2.
+21. Sinhroniziranjeto: git push -u origin master
+22. git checkout bug3
+23. rebase sprema master so komandata: git rebase master
+Porakata shto ja dobiv: Successfully rebased and updated refs/heads/bug3.
+24. git checkout master
+25. git rebase bug3, porakata shto ja dobiv: Successfully rebased and updated refs/heads/master.
+26. Za sinhroniziranjeto napraviv: git push --all --force.
